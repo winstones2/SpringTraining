@@ -6,6 +6,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.view;
 
 public class HomeControllerTest {
@@ -15,7 +16,11 @@ public class HomeControllerTest {
         HomeController homeController = new HomeController();
         MockMvc mock = MockMvcBuilders.standaloneSetup(homeController).build();
         try {
-            mock.perform(MockMvcRequestBuilders.get("/")).andExpect(view().name("intro"));
+            mock.perform(post("/add")
+                    .param("name", "Jim")
+                    .param("id", "1"))
+                    .andExpect(view().name("intro"));
+//            mock.perform(MockMvcRequestBuilders.get("/")).andExpect(view().name("intro"));
         } catch (Exception e) {
             e.printStackTrace();
         }

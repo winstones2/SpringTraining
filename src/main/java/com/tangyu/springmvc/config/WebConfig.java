@@ -12,7 +12,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan("com.tangyu.spring.config")
+@ComponentScan("com.tangyu.springmvc.config")
 //public class WebConfig extends WebMvcConfigurer {
 public class WebConfig extends WebMvcConfigurerAdapter {
 

@@ -15,7 +15,7 @@ public class HomeControllerTest {
         HomeController homeController = new HomeController();
         MockMvc mock = MockMvcBuilders.standaloneSetup(homeController).build();
         try {
-            mock.perform(MockMvcRequestBuilders.get("/")).andExpect(view().name("home"));
+            mock.perform(MockMvcRequestBuilders.get("/")).andExpect(view().name("intro"));
         } catch (Exception e) {
             e.printStackTrace();
         }

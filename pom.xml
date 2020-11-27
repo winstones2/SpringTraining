@@ -113,6 +113,13 @@
         <plugin>
           <artifactId>maven-war-plugin</artifactId>
           <version>3.2.2</version>
+          <configuration>
+            <!--指定web.xml文件的位置-->
+<!--            <webXml>src\main\Web\WEB-INF\web.xml</webXml>-->
+            <!--指定jsp等文件所在位置-->
+<!--            <warSourceDirectory>src\main\java</warSourceDirectory>-->
+<!--            <warSourceDirectory>WEB-INF</warSourceDirectory>-->
+          </configuration>
         </plugin>
         <plugin>
           <artifactId>maven-install-plugin</artifactId>
